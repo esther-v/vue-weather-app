@@ -1,4 +1,5 @@
 <template>
+ 
   <div id="app" :class="typeof weather.main !='undefined' && weather.main.temp > 16 ? 'warm' : '' ">
     <main>
       <div class="search-box">
@@ -23,6 +24,7 @@
       </div>
     </main>
   </div>
+ 
 </template>
 
 <script>
@@ -75,11 +77,15 @@ body{
   font-family: 'Montserrat', sans-serif;
 }
 
+
+
 #app{
   background-image: url('./assets/cold-bg.jpeg');
   background-size: cover;
   background-position: bottom;
   transition: 0.4s;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 #app.warm{
